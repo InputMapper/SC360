@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A53D48B3-FAC6-461D-9586-E4EF02A87A8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC360</RootNamespace>
+    <AssemblyName>SC360</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\AppData\Roaming\InputMapper2\plugins\sc360\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\AppData\Roaming\InputMapper2\plugins\sc360\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ODIF, Version=1.0.5914.23828, Culture=neutral, PublicKeyToken=19233d9f410e16f7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PluginInterface\bin\Release\ODIF.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="MappingWindow.xaml.cs">
+      <DependentUpon>MappingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScarletCrush360Device.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xiDeviceState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ScarletCrush.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MappingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mappingBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\360.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Back_Alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Back_Alt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Dpad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Dpad_Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Dpad_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Dpad_Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Dpad_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_LB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Left_Stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_LT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_RB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Right_Stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_RT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Start_Alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_Start_Alt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24_360_X.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>C:\Users\jhebb\OneDrive\InputMapper2\PluginBuilder\bin\Release\PluginBuilder.exe "$(TargetPath)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

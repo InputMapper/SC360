@@ -1,0 +1,15 @@
+﻿<Page x:Class="SC360.MappingWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+	Title="MappingWindow">
+
+    <Grid Width="289" Height="375">
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/mappingBG.jpg" Stretch="Uniform"/>
+        </Grid.Background>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="63,100,0,0" VerticalAlignment="Top" Width="43" Click="button_Click"/>
+    </Grid>
+</Page>
